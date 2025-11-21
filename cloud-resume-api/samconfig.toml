@@ -1,0 +1,14 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "cloud-resume-api"
+resolve_s3 = true
+s3_prefix = "cloud-resume-api"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+parameter_overrides = "TableName=\"visitor_counter\""
+image_repositories = []
+
+[default.global.parameters]
+region = "us-east-1"
