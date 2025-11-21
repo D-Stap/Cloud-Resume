@@ -74,76 +74,79 @@ main {
   grid-template-columns: 2fr 1.25fr;
   gap: 24px;
 }
-@media (max-width: 1040px) {
+@media (max-width: 860px) {
+  body {
+    padding: 8px;
+  }
+
+  .page {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
   }
+
   aside {
-    order: -1;
+    order: 2;
   }
-}
 
-/* Sections */
-.section {
-  margin-bottom: 18px;
-  padding: 14px;
-  background: rgba(15, 23, 21, 0.9);
-  border-radius: 18px;
-  border: 1px solid rgba(56, 193, 114, 0.2);
-  box-shadow: var(--shadow-soft);
-}
-ul.bullets {
-  list-style: none;
-}
-ul.bullets li {
-  padding-left: 14px;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-}
-
-/* Skill Pills */
-.pill-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.pill {
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-.pill--accent {
-  border-color: rgba(56, 193, 114, 0.7);
-}
-
-/* Visitor Counter */
-#visitor-counter {
-  text-align: center;
-  font-size: 1rem;
-  margin: 18px auto;
-}
-
-/* Footer */
-footer {
-  margin-top: 20px;
-  font-size: 0.75rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: center;
-}
-
-/* Typography tweaks for small screens */
-@media (max-width: 480px) {
-  p, li {
-    font-size: 0.87rem;
+  header {
+    text-align: left;
   }
-  .section-title {
+
+  .contact-line {
+    justify-content: flex-start;
     font-size: 0.85rem;
+    gap: 4px;
   }
+
   .experience-header {
     flex-direction: column;
-    gap: 2px;
+    align-items: flex-start;
   }
 }
+
+@media (max-width: 600px) {
+  .page {
+    padding: 12px;
+  }
+
+  header .name {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  p, li {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  ul.bullets li {
+    padding-left: 12px;
+  }
+
+  .pill {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  #visitor-counter {
+    font-size: 0.85rem;
+    margin-top: 14px;
+  }
+
+  footer {
+    font-size: 0.65rem;
+  }
+}
+
