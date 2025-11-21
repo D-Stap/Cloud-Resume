@@ -1,152 +1,355 @@
-:root {
-  --bg: #0b1210;
-  --card-bg: #121c18;
-  --accent: #38c172;
-  --accent-soft: rgba(56, 193, 114, 0.15);
-  --border: #1f2a24;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
-  --max-width: 960px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dafante Stapleton | Cloud & Security</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-body {
-  background: radial-gradient(circle at top left, rgba(56, 193, 114, 0.18), transparent 55%),
-              radial-gradient(circle at bottom right, rgba(56, 193, 114, 0.12), transparent 55%),
-              var(--bg);
-  color: var(--text-main);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
-  padding: 16px;
-  display: flex;
-  justify-content: center;
-}
+  <style>
+    :root {
+      --bg: #0b1210;
+      --card-bg: #121c18;
+      --accent: #38c172;
+      --accent-soft: rgba(56, 193, 114, 0.15);
+      --border: #1f2a24;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --max-width: 960px;
+    }
 
-.page {
-  width: 100%;
-  max-width: var(--max-width);
-  background: linear-gradient(135deg, rgba(15, 23, 21, 0.98), rgba(6, 10, 9, 0.98));
-  border-radius: 24px;
-  padding: 24px;
-  box-shadow: var(--shadow-soft);
-  border: 2px solid var(--border);
-  position: relative;
-  overflow: hidden;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Header */
-header {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-bottom: 20px;
-  border-bottom: 1px dashed rgba(148, 163, 184, 0.4);
-  margin-bottom: 20px;
-  text-align: center;
-}
+    body {
+      background: radial-gradient(circle at top left, rgba(56, 193, 114, 0.18), transparent 55%),
+      radial-gradient(circle at bottom right, rgba(56, 193, 114, 0.12), transparent 55%),
+      var(--bg);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, sans-serif;
+      line-height: 1.6;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-.name {
-  font-size: clamp(1.8rem, 6vw, 2.6rem);
-  font-family: "Patrick Hand", system-ui;
-  color: var(--accent);
-}
-.title {
-  font-size: clamp(1rem, 3.5vw, 1.2rem);
-}
+    .page {
+      width: 100%;
+      max-width: var(--max-width);
+      background: linear-gradient(135deg, rgba(15, 23, 21, 0.98), rgba(6, 10, 9, 0.98));
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      border: 2px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
 
-.contact-line {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 0.9rem;
-}
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.4);
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-/* Main layout */
-main {
-  display: grid;
-  grid-template-columns: 2fr 1.25fr;
-  gap: 24px;
-}
-@media (max-width: 860px) {
-  body {
-    padding: 8px;
-  }
+    .name {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-family: "Patrick Hand", system-ui;
+      color: var(--accent);
+      text-shadow: 0 2px 10px rgba(56, 193, 114, 0.4);
+    }
 
-  .page {
-    padding: 16px;
-    border-radius: 16px;
-  }
+    .title {
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      opacity: 0.95;
+    }
 
-  main {
-    grid-template-columns: 1fr !important;
-    gap: 16px;
-  }
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
 
-  aside {
-    order: 2;
-  }
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1.25fr;
+      gap: 24px;
+    }
 
-  header {
-    text-align: left;
-  }
+    @media (max-width: 860px) {
+      body { padding: 8px; }
+      .page { padding: 16px; border-radius: 16px; }
+      main { grid-template-columns: 1fr !important; gap: 16px; }
+      aside { order: 2; }
+      header { text-align: left; }
+      .contact-line { justify-content: flex-start; font-size: 0.85rem; gap: 4px; }
+      .experience-header { flex-direction: column; align-items: flex-start; }
+    }
 
-  .contact-line {
-    justify-content: flex-start;
-    font-size: 0.85rem;
-    gap: 4px;
-  }
+    @media (max-width: 600px) {
+      .page { padding: 12px; }
+      header .name { font-size: 1.8rem; }
+      .title { font-size: 1rem; }
+      p, li { font-size: 0.82rem; line-height: 1.45; }
+      ul.bullets li { padding-left: 12px; }
+      .pill { font-size: 0.72rem; padding: 3px 8px; }
+      .section { padding: 10px; }
+      footer { font-size: 0.65rem; }
+    }
 
-  .experience-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+    .section {
+      margin-bottom: 18px;
+      padding: 14px;
+      background: rgba(15, 23, 21, 0.9);
+      border-radius: 18px;
+      border: 1px solid rgba(56, 193, 114, 0.2);
+      box-shadow: var(--shadow-soft);
+    }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 12px;
-  }
+    h2.section-title {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2.section-title::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
 
-  header .name {
-    font-size: 1.8rem;
-  }
+    .experience-item {
+      margin-bottom: 12px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+    }
 
-  .title {
-    font-size: 1rem;
-  }
+    ul.bullets { list-style: none; }
+    ul.bullets li { padding-left: 14px; margin-bottom: 6px; font-size: 0.9rem; }
 
-  p, li {
-    font-size: 0.82rem;
-    line-height: 1.45;
-  }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
-  ul.bullets li {
-    padding-left: 12px;
-  }
+    .pill {
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
 
-  .pill {
-    font-size: 0.72rem;
-    padding: 3px 8px;
-  }
+    .pill--accent {
+      border: 1px solid rgba(56, 193, 114, 0.8);
+      background: linear-gradient(135deg, var(--accent-soft), rgba(15, 23, 21, 0.95));
+    }
 
-  .section {
-    padding: 10px;
-  }
+    footer {
+      margin-top: 20px;
+      font-size: 0.78rem;
+      opacity: 0.9;
+      text-align: center;
+    }
 
-  #visitor-counter {
-    font-size: 0.85rem;
-    margin-top: 14px;
-  }
+    #visitor-counter {
+      text-align: center;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin: 18px auto;
+    }
+  </style>
+</head>
 
-  footer {
-    font-size: 0.65rem;
-  }
-}
+<body>
+  <div class="page">
+    <header>
+      <div class="name">Dafante Stapleton</div>
+      <div class="title">Cloud Security Engineer</div>
+      <div class="contact-line">
+        🍑 Atlanta, GA (Remote / Hybrid)
+        <a href="mailto:Dafante.e.stapleton@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/dafantestapleton" target="_blank">LinkedIn</a>
+        <a href="https://github.com/D-Stap" target="_blank">GitHub</a>
+      </div>
+    </header>
 
+    <main>
+      <!-- LEFT SIDE -->
+      <section>
+        <div class="section">
+          <h2 class="section-title">Summary</h2>
+          <p>
+            Security analyst and veteran with hands-on experience in AWS security, automation, incident
+            response, and cloud modernization. I build and secure cloud-native systems while reducing
+            the manual noise along the way.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <strong>Security Analyst</strong>
+              <span class="experience-meta">2023 – Present · GA Courts · Atlanta, GA</span>
+            </div>
+            <ul class="bullets">
+              <li>Secure modernization project across multiple AWS accounts & regions.</li>
+              <li>Investigate alerts across AWS, Azure AD, M365, and networks.</li>
+              <li>Strengthen guardrails, WAF, and IAM access practices.</li>
+              <li>Standardize response with runbooks/playbooks.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <strong>Security Analyst Intern</strong>
+              <span class="experience-meta">2022 – 2023 · Remote</span>
+            </div>
+            <ul class="bullets">
+              <li>Supported incident response + vulnerability remediation.</li>
+              <li>Performed SIEM tuning to enhance alert fidelity.</li>
+              <li>Delivered phishing awareness improvements.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <strong>Signal / IT Specialist</strong>
+              <span class="experience-meta">2012 – 2022 · U.S Army</span>
+            </div>
+            <ul class="bullets">
+              <li>Provided secure communications under pressure.</li>
+              <li>Mentored junior personnel in cybersecurity practices.</li>
+              <li>Consistent, reliable, and calm when things break.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Projects</h2>
+
+          <div class="experience-item">
+            <strong>Cloud Resume Challenge</strong>
+            <p class="subtext">
+              AWS S3 static site + CloudFront + Route 53 + DynamoDB + Lambda (Python) +
+              API Gateway + SAM IaC + CI/CD coming soon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT SIDE -->
+      <aside>
+        <div class="section">
+          <h2 class="section-title">Skills</h2>
+          <p><strong>Cloud & DevOps</strong></p>
+          <div class="pill-row">
+            <span class="pill pill--accent">AWS</span>
+            <span class="pill">Lambda</span>
+            <span class="pill">API Gateway</span>
+            <span class="pill">DynamoDB</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">Terraform Basics</span>
+          </div>
+
+          <p><strong>Security</strong></p>
+          <div class="pill-row">
+            <span class="pill pill--accent">SIEM / Monitoring</span>
+            <span class="pill">Incident Response</span>
+            <span class="pill">IAM Hardening</span>
+            <span class="pill">WAF Concepts</span>
+          </div>
+
+          <p><strong>Languages & Tools</strong></p>
+          <div class="pill-row">
+            <span class="pill pill--accent">Python</span>
+            <span class="pill">Bash</span>
+            <span class="pill">Linux</span>
+            <span class="pill">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Certifications</h2>
+          <ul class="bullets">
+            <li>AWS Cloud Practitioner</li>
+            <li>CompTIA Security+</li>
+            <li>CompTIA Network+</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+          <p>M.S. Information Technology Management — WGU (In progress)</p>
+        </div>
+      </aside>
+    </main>
+
+    <div id="visitor-counter">Visitors: Loading...</div>
+
+    <footer>
+      <span>Built with AWS · Security · DevSecOps</span>
+      <span>© 2025 Dafante Stapleton</span>
+    </footer>
+
+  </div>
+
+  <!-- Visitor Counter Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function getOrCreateVisitorId() {
+        const key = "visitor_id";
+        let id = localStorage.getItem(key);
+        if (!id) {
+          id = crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`;
+          localStorage.setItem(key, id);
+        }
+        return id;
+      }
+
+      async function updateVisitorCount() {
+        const counterElement = document.getElementById("visitor-counter");
+        const visitorId = getOrCreateVisitorId();
+
+        try {
+          const response = await fetch("https://z8zvl68ibf.execute-api.us-east-1.amazonaws.com/prod/count", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ visitor_id: visitorId }),
+          });
+
+          const data = await response.json();
+          counterElement.textContent = `Visitors: ${data.views}`;
+        } catch (error) {
+          counterElement.textContent = "Visitors: Error";
+        }
+      }
+
+      updateVisitorCount();
+    });
+  </script>
+</body>
+</html>
