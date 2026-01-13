@@ -17,6 +17,9 @@ The goal: build a secure, cloud-hosted, serverless resume application and automa
 
 👉 https://dafantestapletonresume.link
 
+
+<img src="assets/preview.gif" alt="Preview" width="1000">
+
 ---
 
 ## 🏗️ Architecture
