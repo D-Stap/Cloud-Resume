@@ -64,4 +64,3 @@ Tracks unique visitors using:
 - Publish blog write-up on lessons learned
 
 ---
-🔗 LinkedIn: https://www.linkedin.com/in/dafantestapleton
