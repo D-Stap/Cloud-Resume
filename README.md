@@ -33,6 +33,11 @@ The goal: build a secure, cloud-hosted, serverless resume application and automa
 - **AWS SAM** — Infrastructure as Code  
 - **GitHub Actions** *(coming)* — Automated deployment + cache invalidation  
 
+<p align="center">
+  <img src="assets/architecture/" alt="High-level Architecture" width="900">
+</p>
+
+
 ---
 
 ## 📊 Visitor Counter
